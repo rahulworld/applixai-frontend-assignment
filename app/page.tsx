@@ -45,8 +45,7 @@ export default function Home() {
   const [manifacturedDefectData, setManifacturedDefectData] = useState([]);
   const [pieChartData, setPieChartData] = useState<{ [key: string]: any }>({});
 
-  const getStatsOverview = async () => {
-    let statOverviewUrl = `${BASE_URL}get_stats`;
+  const getApiQueryParams = (): string => {
     let searchParams: { [key: string]: string } = {};
     if (selectProductType !== ProductType.all) {
       searchParams["type"] = ProductType[selectProductType];
@@ -69,6 +68,13 @@ export default function Home() {
         (k) => encodeURIComponent(k) + "=" + encodeURIComponent(searchParams[k])
       )
       .join("&");
+    return query;
+  };
+
+  const getStatsOverview = async () => {
+    let statOverviewUrl = `${BASE_URL}get_stats`;
+    const query = getApiQueryParams();
+
     try {
       const response = await fetch(
         query ? statOverviewUrl + "?" + query : statOverviewUrl
@@ -86,28 +92,7 @@ export default function Home() {
 
   const getProductAndDefectOverview = async () => {
     var statOverviewUrl = new URL(`${BASE_URL}products`);
-    let searchParams: { [key: string]: string } = {};
-    if (selectProductType !== ProductType.all) {
-      searchParams["type"] = ProductType[selectProductType];
-    }
-    if (selectDefectType !== FailureType.all) {
-      searchParams["defectType"] = FailureType[selectDefectType];
-    }
-    if (selectFilter !== FilterBy.year) {
-      if (selectFilter == FilterBy.month) {
-        searchParams["startDate"] = "2024-08-01";
-        searchParams["endDate"] = "2024-08-31";
-      }
-      if (selectFilter == FilterBy.threeMonths) {
-        searchParams["startDate"] = "2024-06-05";
-        searchParams["endDate"] = "2024-08-31";
-      }
-    }
-    let query = Object.keys(searchParams)
-      .map(
-        (k) => encodeURIComponent(k) + "=" + encodeURIComponent(searchParams[k])
-      )
-      .join("&");
+    const query = getApiQueryParams();
     try {
       const response = await fetch(
         query ? statOverviewUrl + "?" + query : statOverviewUrl
@@ -125,28 +110,7 @@ export default function Home() {
 
   const getDefectOverview = async () => {
     var statOverviewUrl = new URL(`${BASE_URL}defects`);
-    let searchParams: { [key: string]: string } = {};
-    if (selectProductType !== ProductType.all) {
-      searchParams["type"] = ProductType[selectProductType];
-    }
-    if (selectDefectType !== FailureType.all) {
-      searchParams["defectType"] = FailureType[selectDefectType];
-    }
-    if (selectFilter !== FilterBy.year) {
-      if (selectFilter == FilterBy.month) {
-        searchParams["startDate"] = "2024-08-01";
-        searchParams["endDate"] = "2024-08-31";
-      }
-      if (selectFilter == FilterBy.threeMonths) {
-        searchParams["startDate"] = "2024-06-05";
-        searchParams["endDate"] = "2024-08-31";
-      }
-    }
-    let query = Object.keys(searchParams)
-      .map(
-        (k) => encodeURIComponent(k) + "=" + encodeURIComponent(searchParams[k])
-      )
-      .join("&");
+    const query = getApiQueryParams();
     try {
       const response = await fetch(
         query ? statOverviewUrl + "?" + query : statOverviewUrl
