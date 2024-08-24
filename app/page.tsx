@@ -1,5 +1,5 @@
 "use client";
-import { MouseEvent, SetStateAction, useEffect, useState } from "react";
+import { MouseEvent, SetStateAction, useEffect, useRef, useState } from "react";
 
 import { TrendCard } from "./src/components/molecules/card";
 import { DefectScanner } from "./src/components/organisms/ModelPresenter";
@@ -44,6 +44,7 @@ export default function Home() {
 
   const [manifacturedDefectData, setManifacturedDefectData] = useState([]);
   const [pieChartData, setPieChartData] = useState<{ [key: string]: any }>({});
+  const hasPageBeenRendered = useRef(false);
 
   const getApiQueryParams = (): string => {
     let searchParams: { [key: string]: string } = {};
@@ -130,6 +131,7 @@ export default function Home() {
     await getStatsOverview();
     await getDefectOverview();
     await getProductAndDefectOverview();
+    hasPageBeenRendered.current = true;
   };
 
   useEffect(() => {
@@ -138,13 +140,7 @@ export default function Home() {
 
   useEffect(() => {
     console.log("its calling");
-    if (
-      !(
-        selectFilter == FilterBy.year &&
-        selectDefectType == FailureType.all &&
-        selectProductType == ProductType.all
-      )
-    ) {
+    if (hasPageBeenRendered.current) {
       callApis();
     }
   }, [selectProductType, selectFilter, selectDefectType]);
