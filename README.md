@@ -1,39 +1,75 @@
-# applixai-frontend-assignment
-Auto Copilot
+# ApplixAi AutoCopilot
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A Next.js web application that features dynamic 3D model rendering with Three.js, interactive data tables using `ag-Grid`, and data visualization with MUI charts.
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is a web application built with the Next.js framework, utilizing Three.js for rendering interactive 3D models, `ag-Grid` for displaying data in table format, and Material-UI (MUI) for creating interactive charts. The application aims to provide a comprehensive tool for data visualization and 3D model interaction, including features like rotate, spin, zoom in, and zoom out.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Next.js Framework**: Utilizes server-side rendering and static site generation for performance and SEO benefits.
+- **Three.js Integration**: Renders interactive 3D models with support for rotation, spinning, zooming in, and zooming out.
+- **`ag-Grid` Data Tables**: High-performance data grids with sorting, filtering, pagination, and editing capabilities.
+- **MUI Charts**: Provides interactive and customizable charts for data visualization.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Modular Architecture**: Easy to extend, customize, and maintain.
 
-## Learn More
+## Live deployed
 
-To learn more about Next.js, take a look at the following resources:
+Please visit - https://applixai-frontend-assignment.vercel.app/
+Please follow for mixed content block error - https://stackoverflow.com/a/24434461
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To run this project locally, follow these steps:
 
-## Deploy on Vercel
+1. **Clone the repository:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/rahulworld/applixai-frontend-assignment.git
+   cd applixai-frontend-assignment
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+4. **Open your browser:**
+
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+
+## Usage
+
+### 3D Model Rendering with Three.js
+
+The application uses Three.js to render 3D models. You can interact with the models using the following controls:
+
+- **Rotate**: Click and drag the model to rotate
