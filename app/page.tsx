@@ -137,7 +137,16 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    callApis();
+    console.log("its calling");
+    if (
+      !(
+        selectFilter == FilterBy.year &&
+        selectDefectType == FailureType.all &&
+        selectProductType == ProductType.all
+      )
+    ) {
+      callApis();
+    }
   }, [selectProductType, selectFilter, selectDefectType]);
 
   const getTrendKey = (val: string): any => `${val}_trend`;
