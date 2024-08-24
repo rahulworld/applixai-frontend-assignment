@@ -31,6 +31,15 @@ This project is a web application built with the Next.js framework, utilizing Th
 Please visit - https://applixai-frontend-assignment.vercel.app/
 Please follow for mixed content block error - https://stackoverflow.com/a/24434461
 
+## Demo Images -
+
+![Filter 1](example/example1.png)
+![Filter 2](example/example2.png)
+![Filter 3](example/example3.png)
+![Filter 4](example/example4.png)
+![Filter 5](example/example5.png)
+![Filter 6](example/example6.png)
+
 ## Installation
 
 To run this project locally, follow these steps:
@@ -73,12 +82,3 @@ To run this project locally, follow these steps:
 The application uses Three.js to render 3D models. You can interact with the models using the following controls:
 
 - **Rotate**: Click and drag the model to rotate
-
-## Demo Images -
-
-![Filter 1](example/example1.png)
-![Filter 2](example/example2.png)
-![Filter 3](example/example3.png)
-![Filter 4](example/example4.png)
-![Filter 5](example/example5.png)
-![Filter 6](example/example6.png)
