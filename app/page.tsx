@@ -162,22 +162,18 @@ export default function Home() {
     }
   };
 
+  const callApis = async () => {
+    await getStatsOverview();
+    await getDefectOverview();
+    await getProductAndDefectOverview();
+  };
+
   useEffect(() => {
-    async function fetchData() {
-      await getStatsOverview();
-      await getDefectOverview();
-      await getProductAndDefectOverview();
-    }
-    fetchData();
+    callApis();
   }, []);
 
   useEffect(() => {
-    async function fetchData() {
-      await getStatsOverview();
-      await getDefectOverview();
-      await getProductAndDefectOverview();
-    }
-    fetchData();
+    callApis();
   }, [selectProductType, selectFilter, selectDefectType]);
 
   const getTrendKey = (val: string): any => `${val}_trend`;

@@ -73,3 +73,12 @@ To run this project locally, follow these steps:
 The application uses Three.js to render 3D models. You can interact with the models using the following controls:
 
 - **Rotate**: Click and drag the model to rotate
+
+## Demo Images -
+
+![Filter 1](example/example1.png)
+![Filter 2](example/example2.png)
+![Filter 3](example/example3.png)
+![Filter 4](example/example4.png)
+![Filter 5](example/example5.png)
+![Filter 6](example/example6.png)
