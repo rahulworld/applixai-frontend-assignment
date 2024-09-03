@@ -2,6 +2,13 @@
 
 A Next.js web application that features dynamic 3D model rendering with Three.js, interactive data tables using `ag-Grid`, and data visualization with MUI charts.
 
+## Live deployed
+
+Please visit - https://applixai-frontend-assignment.vercel.app/
+Please follow for mixed content block error - https://stackoverflow.com/a/24434461
+
+![Demo](example/demo.gif)
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -25,13 +32,6 @@ This project is a web application built with the Next.js framework, utilizing Th
 - **MUI Charts**: Provides interactive and customizable charts for data visualization.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 - **Modular Architecture**: Easy to extend, customize, and maintain.
-
-## Live deployed
-
-Please visit - https://applixai-frontend-assignment.vercel.app/
-Please follow for mixed content block error - https://stackoverflow.com/a/24434461
-
-![Demo](example/demo.gif)
 
 ## Demo Images -
 
