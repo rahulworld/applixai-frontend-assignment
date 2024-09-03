@@ -32,7 +32,8 @@ import { headers } from "next/headers";
 import Head from "next/head";
 // import TrendDropDown from "./src/components/molecules/dropdown";
 
-const BASE_URL = `http://${process.env.SERVER_URL}/api/`;
+// const BASE_URL = `http://${process.env.SERVER_URL}/api/`;
+const BASE_URL = "http://3.145.150.125/api/";
 
 export default function Home() {
   const [selectFilter, setSelectedFilter] = useState(FilterBy.year);
