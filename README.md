@@ -31,6 +31,8 @@ This project is a web application built with the Next.js framework, utilizing Th
 Please visit - https://applixai-frontend-assignment.vercel.app/
 Please follow for mixed content block error - https://stackoverflow.com/a/24434461
 
+![Demo](example/demo.gif)
+
 ## Demo Images -
 
 ![Filter 1](example/example1.png)
